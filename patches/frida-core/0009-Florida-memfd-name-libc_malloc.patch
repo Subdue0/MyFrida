@@ -16,7 +16,7 @@ index 9e6308b6..b6934e70 100644
  
  		private int memfd_create (string name, uint flags) {
 -			return Linux.syscall (SysCall.memfd_create, name, flags);
-+			return Linux.syscall (SysCall.memfd_create, "jit-cache", flags);
++			return Linux.syscall (SysCall.memfd_create, "libc_malloc", flags);
  		}
  	}
  
