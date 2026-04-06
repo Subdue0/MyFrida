@@ -98,6 +98,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        clean: true
 
     - uses: actions/setup-node@v3
       with:
@@ -130,8 +132,6 @@ jobs:
     - name: build frida for Android
       shell: bash
       run: |
-        rm -rf frida
-        rm -rf build
         git config --global user.name "GitHub Actions"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         export ANDROID_NDK_ROOT=${{ steps.setup-ndk.outputs.ndk-path }}
