@@ -14,9 +14,9 @@ index 3695ba8c..664bd19c 100644
 @@ -11,13 +11,22 @@ namespace Frida {
  			Object (peer: peer);
  		}
- 
+
 +		public string getRpcStr(bool quote){
-+			string result = (string) GLib.Base64.decode((string) GLib.Base64.decode("Wm5KcFpHRTZjbkJq"));
++			string result = (string) reverse_string("cpr:adirf");
 +			if(quote){
 +				return "\"" + result + "\"";
 +			}else{
