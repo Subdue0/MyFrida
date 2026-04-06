@@ -134,6 +134,7 @@ jobs:
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         export ANDROID_NDK_ROOT=${{ steps.setup-ndk.outputs.ndk-path }}
         rm -rf frida
+        rm -rf build/tmp-android-*
         git clone --branch ${{ needs.check_version.outputs.FRIDA_VERSION }} --recurse-submodules https://github.com/frida/frida
         cd frida
         for path in ../patches/*
